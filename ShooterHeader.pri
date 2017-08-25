@@ -8847,5 +8847,8 @@ HEADERS += \
 	"$$ShooterRootPath/Source/Shooter/ShooterGameMode.h" \
 	"$$ShooterRootPath/Source/Shooter/ShooterHUD.h" \
 	"$$ShooterRootPath/Source/Shooter/ShooterProjectile.h" \
+	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPerson.h" \
+	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.h" \
+	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.h" \
  
 

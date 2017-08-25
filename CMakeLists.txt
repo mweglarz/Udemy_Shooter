@@ -6844,6 +6844,8 @@ set(SOURCE_FILES
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterGameMode.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterHUD.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterProjectile.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.cpp"
  )
 
 set(HEADER_FILES 
@@ -15695,6 +15697,9 @@ set(HEADER_FILES
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterGameMode.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterHUD.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterProjectile.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPerson.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.h"
  )
 
 set(CONFIG_FILES 
