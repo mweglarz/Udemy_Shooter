@@ -20,6 +20,7 @@ public:
 	// Sets default values for this component's properties
 	UPatrolRouteComponent();
 
+	UFUNCTION(BlueprintCallable, Category = "Patrol_Route")
 	TArray<AActor*> GetPatrolPoints() const;
 
 protected:

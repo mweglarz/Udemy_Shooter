@@ -17,6 +17,7 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent &Own
 	if (!ensure(RouteComponent)) return EBTNodeResult::Failed;
 
 	TArray<AActor*> Waypoints = RouteComponent->GetPatrolPoints();
+	if (!(Waypoints.Num() > 0 && Index < Waypoints.Num())) return EBTNodeResult::Failed;
 
 	BlackboardComponent->SetValueAsObject(WaypointKey.SelectedKeyName, Waypoints[Index]);
 
