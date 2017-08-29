@@ -6834,6 +6834,7 @@ SOURCES += \
 	"$$ShooterRootPath/Source/Shooter/ShooterHUD.cpp" \
 	"$$ShooterRootPath/Source/Shooter/ShooterProjectile.cpp" \
 	"$$ShooterRootPath/Source/Shooter/AI/ChooseNextWaypoint.cpp" \
+	"$$ShooterRootPath/Source/Shooter/AI/PatrolRouteComponent.cpp" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.cpp" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.cpp" \
  

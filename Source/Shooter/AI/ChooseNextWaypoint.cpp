@@ -3,8 +3,8 @@
 
 #include "ChooseNextWaypoint.h"
 #include "BehaviorTree/BlackboardComponent.h"
-
-
+#include "AIController.h"
+#include "PatrolRouteComponent.h"
 
 
 EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent &OwnerComp, uint8 *NodeMemory) {
@@ -12,7 +12,16 @@ EBTNodeResult::Type UChooseNextWaypoint::ExecuteTask(UBehaviorTreeComponent &Own
 	UBlackboardComponent* BlackboardComponent = OwnerComp.GetBlackboardComponent();
 	int32 Index = BlackboardComponent->GetValueAsInt(IndexKey.SelectedKeyName);
 
-	UE_LOG(LogTemp, Warning, TEXT("Waypoint index: %i"), Index);
+	UPatrolRouteComponent* RouteComponent = OwnerComp.GetAIOwner()->GetPawn()->FindComponentByClass<UPatrolRouteComponent>();
+
+	if (!ensure(RouteComponent)) return EBTNodeResult::Failed;
+
+	TArray<AActor*> Waypoints = RouteComponent->GetPatrolPoints();
+
+	BlackboardComponent->SetValueAsObject(WaypointKey.SelectedKeyName, Waypoints[Index]);
+
+	int32 NewIndex = ++Index % Waypoints.Num();
+	BlackboardComponent->SetValueAsInt(IndexKey.SelectedKeyName, NewIndex);
 
 	return EBTNodeResult::Succeeded;
 }

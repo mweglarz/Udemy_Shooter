@@ -17,7 +17,10 @@ class SHOOTER_API UChooseNextWaypoint : public UBTTaskNode
 protected:
 	UPROPERTY(EditAnywhere, Category = "Blackboard")
 	struct FBlackboardKeySelector IndexKey;
-	
+
+	UPROPERTY(EditAnywhere, Category = "Blackboard")
+	struct FBlackboardKeySelector WaypointKey;
+
 public:
 	virtual EBTNodeResult::Type ExecuteTask(UBehaviorTreeComponent &OwnerComp, uint8 *NodeMemory) override;
 	
