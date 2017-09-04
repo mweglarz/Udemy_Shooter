@@ -6829,12 +6829,12 @@ SOURCES += \
 	"$$unrealRootPath/Engine/Plugins/Tests/RuntimeTests/Source/RuntimeTests/Private/Slate/RichTextMarkupProcessingTest.cpp" \
 	"$$unrealRootPath/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Private/ScreenshotTools.cpp" \
 	"$$ShooterRootPath/Source/Shooter/Shooter.cpp" \
-	"$$ShooterRootPath/Source/Shooter/ShooterCharacter.cpp" \
 	"$$ShooterRootPath/Source/Shooter/ShooterGameMode.cpp" \
 	"$$ShooterRootPath/Source/Shooter/ShooterHUD.cpp" \
 	"$$ShooterRootPath/Source/Shooter/ShooterProjectile.cpp" \
 	"$$ShooterRootPath/Source/Shooter/AI/ChooseNextWaypoint.cpp" \
 	"$$ShooterRootPath/Source/Shooter/AI/PatrolRouteComponent.cpp" \
+	"$$ShooterRootPath/Source/Shooter/Player/FirstPersonCharacter.cpp" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.cpp" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.cpp" \
  

@@ -8843,12 +8843,12 @@ HEADERS += \
 	"$$unrealRootPath/Engine/Plugins/Tests/RuntimeTests/Source/RuntimeTests/Public/RuntimeTests.h" \
 	"$$unrealRootPath/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Public/ScreenshotTools.h" \
 	"$$ShooterRootPath/Source/Shooter/Shooter.h" \
-	"$$ShooterRootPath/Source/Shooter/ShooterCharacter.h" \
 	"$$ShooterRootPath/Source/Shooter/ShooterGameMode.h" \
 	"$$ShooterRootPath/Source/Shooter/ShooterHUD.h" \
 	"$$ShooterRootPath/Source/Shooter/ShooterProjectile.h" \
 	"$$ShooterRootPath/Source/Shooter/AI/ChooseNextWaypoint.h" \
 	"$$ShooterRootPath/Source/Shooter/AI/PatrolRouteComponent.h" \
+	"$$ShooterRootPath/Source/Shooter/Player/FirstPersonCharacter.h" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPerson.h" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.h" \
 	"$$ShooterRootPath/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.h" \

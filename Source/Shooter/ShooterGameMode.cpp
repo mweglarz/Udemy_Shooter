@@ -2,7 +2,7 @@
 
 #include "ShooterGameMode.h"
 #include "ShooterHUD.h"
-#include "ShooterCharacter.h"
+#include "Player/FirstPersonCharacter.h"
 #include "UObject/ConstructorHelpers.h"
 
 AShooterGameMode::AShooterGameMode()
