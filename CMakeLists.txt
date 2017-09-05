@@ -6841,13 +6841,11 @@ set(SOURCE_FILES
 	"${UE4_ROOT_PATH}/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Private/ScreenshotTools.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/Shooter.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterGameMode.cpp"
-	"${GAME_ROOT_PATH}/Source/Shooter/ShooterHUD.cpp"
-	"${GAME_ROOT_PATH}/Source/Shooter/ShooterProjectile.cpp"
-	"${GAME_ROOT_PATH}/Source/Shooter/AI/ChooseNextWaypoint.cpp"
-	"${GAME_ROOT_PATH}/Source/Shooter/AI/PatrolRouteComponent.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/NPC/AI/ChooseNextWaypoint.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/NPC/AI/PatrolRouteComponent.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/Player/FirstPersonCharacter.cpp"
-	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.cpp"
-	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/Projectile/SimpleProjectile.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/UI/ShooterHUD.cpp"
  )
 
 set(HEADER_FILES 
@@ -15696,14 +15694,11 @@ set(HEADER_FILES
 	"${UE4_ROOT_PATH}/Engine/Plugins/Tests/ScreenshotTools/Source/ScreenshotTools/Public/ScreenshotTools.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/Shooter.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/ShooterGameMode.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/ShooterHUD.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/ShooterProjectile.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/AI/ChooseNextWaypoint.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/AI/PatrolRouteComponent.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/NPC/AI/ChooseNextWaypoint.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/NPC/AI/PatrolRouteComponent.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/Player/FirstPersonCharacter.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPerson.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonCharacter.h"
-	"${GAME_ROOT_PATH}/Source/Shooter/TP_ThirdPerson/TP_ThirdPersonGameMode.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/Projectile/SimpleProjectile.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/UI/ShooterHUD.h"
  )
 
 set(CONFIG_FILES 
