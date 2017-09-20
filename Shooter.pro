@@ -9,7 +9,7 @@ CONFIG -= qt
 
 TARGET = UE4 
 
-unrealRootPath=/home/marcin/Applications/UnrealEngine
+unrealRootPath=/opt/unreal-engine
 ShooterRootPath=/home/marcin/data/Development/UnrealEngine/Udemy/Shooter
 
 gameProjectFile=/home/marcin/data/Development/UnrealEngine/Udemy/Shooter/Shooter.uproject
