@@ -7067,6 +7067,7 @@ set(SOURCE_FILES
 	"${GAME_ROOT_PATH}/Source/Shooter/Player/FirstPersonCharacter.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/Projectile/SimpleProjectile.cpp"
 	"${GAME_ROOT_PATH}/Source/Shooter/UI/ShooterHUD.cpp"
+	"${GAME_ROOT_PATH}/Source/Shooter/Weapons/Gun.cpp"
  )
 
 set(HEADER_FILES 
@@ -16200,6 +16201,7 @@ set(HEADER_FILES
 	"${GAME_ROOT_PATH}/Source/Shooter/Player/FirstPersonCharacter.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/Projectile/SimpleProjectile.h"
 	"${GAME_ROOT_PATH}/Source/Shooter/UI/ShooterHUD.h"
+	"${GAME_ROOT_PATH}/Source/Shooter/Weapons/Gun.h"
  )
 
 set(CONFIG_FILES 

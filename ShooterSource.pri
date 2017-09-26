@@ -7056,5 +7056,6 @@ SOURCES += \
 	"$$ShooterRootPath/Source/Shooter/Player/FirstPersonCharacter.cpp" \
 	"$$ShooterRootPath/Source/Shooter/Projectile/SimpleProjectile.cpp" \
 	"$$ShooterRootPath/Source/Shooter/UI/ShooterHUD.cpp" \
+	"$$ShooterRootPath/Source/Shooter/Weapons/Gun.cpp" \
  
 

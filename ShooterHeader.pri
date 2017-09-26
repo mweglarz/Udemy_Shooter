@@ -9129,5 +9129,6 @@ HEADERS += \
 	"$$ShooterRootPath/Source/Shooter/Player/FirstPersonCharacter.h" \
 	"$$ShooterRootPath/Source/Shooter/Projectile/SimpleProjectile.h" \
 	"$$ShooterRootPath/Source/Shooter/UI/ShooterHUD.h" \
+	"$$ShooterRootPath/Source/Shooter/Weapons/Gun.h" \
  
 
