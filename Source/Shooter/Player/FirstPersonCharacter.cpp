@@ -4,10 +4,12 @@
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
+#include "Components/SkeletalMeshComponent.h"
 #include "GameFramework/InputSettings.h"
 #include "HeadMountedDisplayFunctionLibrary.h"
 #include "MotionControllerComponent.h"
 #include "../Weapons/Gun.h"
+
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -49,7 +51,7 @@ void AFirstPersonCharacter::BeginPlay()
 	Super::BeginPlay();
 
 	// Show or hide the two versions of the gun based on whether or not we're using motion controllers.
-	 Mesh1P->SetHiddenInGame(bUsingMotionControllers, true);
+	Mesh1P->SetHiddenInGame(bUsingMotionControllers, true);
 
 	//Attach gun mesh component to Skeleton,
 	// doing it here because the skeleton is not yet created in the constructor
@@ -58,6 +60,9 @@ void AFirstPersonCharacter::BeginPlay()
 	Gun->AttachToComponent(Mesh1P,
 						   FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true),
 						   TEXT("GripPoint"));
+	Gun->AnimInstance = Mesh1P->GetAnimInstance();
+
+	SetupCustomBindings();
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -70,13 +75,6 @@ void AFirstPersonCharacter::SetupPlayerInputComponent(class UInputComponent* Pla
 
 	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
-
-	//InputComponent->BindTouch(EInputEvent::IE_Pressed, this, &AFirstPersonCharacter::TouchStarted);
-	if (EnableTouchscreenMovement(PlayerInputComponent) == false)
-	{
-		// TODO: Fix binding or remove
-//		PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AFirstPersonCharacter::OnFire);
-	}
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AFirstPersonCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AFirstPersonCharacter::MoveRight);
@@ -197,4 +195,12 @@ bool AFirstPersonCharacter::EnableTouchscreenMovement(class UInputComponent* Pla
 		//PlayerInputComponent->BindTouch(EInputEvent::IE_Repeat, this, &AFirstPersonCharacter::TouchUpdate);
 	}
 	return bResult;
+}
+
+void AFirstPersonCharacter::SetupCustomBindings() {
+
+	if (ensure(InputComponent) && EnableTouchscreenMovement(InputComponent) == false) {
+		UE_LOG(LogTemp, Warning, TEXT("INSIDE BINDING ON FIRE"));
+		InputComponent->BindAction("Fire", IE_Pressed, Gun, &AGun::OnFire);
+	}
 }
